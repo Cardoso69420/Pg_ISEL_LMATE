@@ -2,7 +2,7 @@ from random import seed
 from random import choices
 from random import randint
 
-seed(5594)
+seed(4128)
 
 g = [73, 12, 50, 49, 88, 5, 61, 30]
 
@@ -28,7 +28,7 @@ g_4 = choices(range(0, 101), k=randint(13000, 13999))
 g_5 = choices(range(0, 101), k=randint(14000, 14999))
 
 print(r(g_1))
-print(r(g_2))
-print(r(g_5))
-print(r(g_3))
 print(r(g_4))
+print(r(g_3))
+print(r(g_5))
+print(r(g_2))
