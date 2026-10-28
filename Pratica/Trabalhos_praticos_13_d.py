@@ -28,7 +28,7 @@ h_4 = choices(range(100), k=1000)
 h_5 = choices(range(100), k=1000)
 
 
-
+    
 print(f(100, h_5))
 print(f(3, h_3))
 print(f(78, h_4))
