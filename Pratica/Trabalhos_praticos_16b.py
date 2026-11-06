@@ -4,18 +4,18 @@ from random import choices
 
 seed(5656)
 
-def u(tabela, cliente):
-    contador = 0
-    for valor in tabela[cliente - 1]:
-        if valor != 0:
-            contador += 1
-    return contador
+def u(table, client_number):
+    count = 0
+    for i in range(len(table[client_number - 1])):
+        if table[client_number - 1][i] != 0:
+            count += 1
+    return count
 
-def w(tabela, cliente):
-    total = 0
-    for valor in tabela[cliente - 1]:
-        total += valor
-    return total
+def w(table, client_number):
+    sum = 0
+    for i in range(len(table[client_number - 1])):
+        sum += table[client_number - 1][i]
+    return sum
 
 s = [
     [2, 0, 1, 0],
