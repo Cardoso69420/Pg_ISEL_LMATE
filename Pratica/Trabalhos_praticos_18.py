@@ -9,7 +9,7 @@ def d(relatory, element, opening_limit):
     for register in relatory.split(';'):
         code, opening = regist.split(':')
         code = code.upper()
-        opening = float(opening.replace(',', '.')
+        opening = float(opening.replace(',', '.'))
         if code.startswith(element) and opening > opening_limit:          
             count += 1
     return count
