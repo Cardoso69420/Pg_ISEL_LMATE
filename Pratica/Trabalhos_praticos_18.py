@@ -4,16 +4,16 @@ from random import randint
 
 seed(9090)
 
-def d(relatorio, tipo, limite):
-    contador = 0
-    registos = relatorio.split(';')
-    for r in registos:
-        partes = r.split(':')
-        codigo = partes[0].strip().upper()
-        abertura = float(partes[1].strip().replace(',', '.'))
-        if codigo[0:3] == tipo and abertura > limite:
-            contador = contador + 1
-    return contador
+def d(relatory, element, opening_limit):
+    count = 0
+    for register in relatory.split(';'):
+        code, opening = regist.split(':')
+        code = code.upper()
+        opening = float(opening.replace(',', '.')
+        if code.startswith(element) and opening > opening_limit:          
+            count += 1
+    return count
+        
 
 e = 'PIL-01: 0,30; vig-02:0,45 ; pil-03:0,10;PIL-04 : 0,35;laj-01:0,50'
 print(e)
@@ -58,8 +58,8 @@ print(s_5[998])
 print(s_5[999])
 
 # Respostas
-print('1.1', d(e_2, 'VIG', 0.3), '-> afirmação: 61')
-print('1.2', d(e_1, 'PIL', 0.2), '-> afirmação: 402')
-print('1.3', d(e_3, 'LAJ', 0.4), '-> afirmação: 161')
-print('1.4', d(e_4, 'PIL', 0.5), '-> afirmação: 41')
-print('1.5', d(e_5, 'VIG', 0.6), '-> afirmação: 130')
+print(d(e_2, 'VIG', 0.3))
+print(d(e_1, 'PIL', 0.2))
+print(d(e_3, 'LAJ', 0.4))
+print(d(e_4, 'PIL', 0.5))
+print(d(e_5, 'VIG', 0.6))
