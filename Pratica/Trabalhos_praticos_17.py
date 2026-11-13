@@ -4,16 +4,14 @@ from random import randint
 
 seed(9934)
 
-def m(tabela, categoria, preco_min):
-    contador = 0
-    registos = tabela.split(';')
-    for r in registos:
-        partes = r.split(':')
-        codigo = partes[0]
-        preco = float(partes[1].replace(',', '.'))
-        if codigo[0:3] == categoria and preco > preco_min:
-            contador = contador + 1
-    return contador
+def m(price_table, category, minimum_price):
+    count = 0
+    for regist in price_table.split(';'):
+        code, price = regist.split(':')
+        price = float(price.replace(',', '.'))
+        if code.startswith(category) and price > minimun_price:          
+            count += 1
+    return count
 
 y = 'BEB-01:1,50;MER-02:2,49;BEB-03:0,79;BEB-04:3,20;LIM-01:4,10'
 print(y)
@@ -57,8 +55,8 @@ print(j_5[998])
 print(j_5[999])
 
 # Respostas
-print('1.1', m(y_2, 'MER', 2.5), '-> afirmação: 767')
-print('1.2', m(y_5, 'MER', 5.5), '-> afirmação: 145')
-print('1.3', m(y_1, 'BEB', 1.5), '-> afirmação: 292')
-print('1.4', m(y_4, 'BEB', 4.5), '-> afirmação: 185')
-print('1.5', m(y_3, 'LIM', 3.5), '-> afirmação: 239')
+print(m(y_2, 'MER', 2.5))
+print(m(y_5, 'MER', 5.5))
+print(m(y_1, 'BEB', 1.5))
+print(m(y_4, 'BEB', 4.5))
+print(m(y_3, 'LIM', 3.5))
