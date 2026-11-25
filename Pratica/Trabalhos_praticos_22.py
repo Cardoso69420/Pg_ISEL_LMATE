@@ -10,7 +10,7 @@ e = [3, 4, 4, 5, 5, 6]
 def p(number, number_list):
     exists = False
     i = 0
-    while exists  == False and i < len(number_list):
+    while exists == False and i < len(number_list):
         if number == number_list[i]:
             exists = True
         i += 1
